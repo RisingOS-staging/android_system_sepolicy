@@ -53,6 +53,7 @@ allow init dev_type:blk_file getattr;
 
 # Allow init to write to the drop_caches file.
 allow init proc_drop_caches:file rw_file_perms;
+allow init proc_compaction_proactiveness:file rw_file_perms;
 
 # Allow the BoringSSL self test to request a reboot upon failure
 set_prop(init, powerctl_prop)
